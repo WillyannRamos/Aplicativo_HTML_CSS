@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(45deg, #00b4d8,#093c5e, #790707, #000000);
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        div {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        div:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            max-width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #00b4d8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border: 2px solid #00b4d8;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #0077b6;
+            box-shadow: 0 0 10px rgba(0, 180, 216, 0.6);
+        }
+
+        button {
+            background-color: #00b4d8;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 18px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 180, 216, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0077b6;
+            transform: translateY(-5px);
+        }
+
+        a {
+            color: lightblue;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 15px;
+            font-weight: lighter;
+        }
+
+        @media (max-width: 600px) {
+            div {
+                width: 90%;
+                padding: 30px;
+            }
+            input, button {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://img.freepik.com/vetores-premium/design-do-logotipo-wt_731343-28.jpg" 
+             alt="Design do logotipo WT | Vetor Premium">
+        <form action="tela-02.html" method="GET">
+            <h1>Login</h1>
+            <input type="text" placeholder="Nome" name="nome" required>
+            <input type="password" placeholder="Senha" name="senha" required>
+            <button type="submit">Entrar</button>
+            <br><br>
+            <a href="tela-01.html">Cadastrar-se</a> <!-- Link para a tela de cadastro -->
+            <br><br>
+            <h3>Página de Esportes</h3>
+        </form>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1d;
+            color: white;
+        }
+
+        header {
+            background-color: #2a5298;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #007bff;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 15px rgba(0, 180, 216, 0.5);
+        }
+
+        header h3 {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        header .login-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: #00b4d8;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid #00b4d8;
+        }
+
+        header .login-link:hover {
+            background-color: #00b4d8;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a, nav button {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00b4d8;
+            font-weight: bold;
+            font-size: 1.1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav button:hover {
+            color: #0077b6;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #282c34;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 20px;
+        }
+
+        .product img {
+            max-width: 250px;
+            height: 250px;
+            border-radius: 8px;
+            margin-right: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 180, 216, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 1.6em;
+            color: #ffffff;
+            margin: 0 0 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-description {
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #28a745;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 25px;
+            background-color: #00b4d8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s ease;
+            box-shadow: 0px 4px 15px rgba(0, 180, 216, 0.4);
+        }
+
+        .buy-button:hover {
+            background-color: #0077b6;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://img.freepik.com/vetores-premium/design-do-logotipo-wt_731343-28.jpg" alt="Design do logotipo WT | Vetor Premium">
+        <div style="text-align: center;">
+            <h1>Bem-vindo à Nossa Loja Online</h1>
+            <h3>Gerenciado por Willyann Teodoro Ramos</h3>
+            <p>Confira nossas ofertas incríveis!</p>
+        </div>
+        <a href="tela-de-login.html" class="login-link">Sair</a>
+    </header>
+
+    <nav>
+        <button onclick="window.location.href='tela-03.html';" class="buy-button">Camisetas</button>
+        <button onclick="window.location.href='tela-04.html';" class="buy-button">Chuteira</button>
+        <button onclick="window.location.href='tela-05.html';" class="buy-button">Calção</button>
+        <button onclick="window.location.href='tela-06.html';" class="buy-button">Meião</button>    
+    </nav>
+    <div style="text-align: center;">
+        <h2>Só aqui encontrará promoções exclusivas!</h2>
+        <h3>Vejá só equipamentos em promoção!</h3>
+    </div>
+
+    <div class="container">
+        <h1>Promoções%</h1>
+        <div id="camisa" class="product">
+            <img src="https://acdn.mitiendanube.com/stores/003/675/491/products/510315ab-bd0784956389a529b217284959529473-1024-1024.jpeg" alt="Camiseta Corinthians II Away 2024/25 Jogador Preta">
+            <div class="product-details">
+                <h2 class="product-title">Camiseta Black do Corinthians</h2>
+                <p class="product-description">Camisa oficial com design exclusivo para os torcedores.</p>
+                <p class="product-price">R$ 89,99%</p>
+                <a href="https://wa.me/12935000257?text=Olá%20gostaria%20de%20pedir%20uma%20Camiseta%20oficial%20Black%20do%20Corinthians." target="_blank" class="buy-button">Comprar Agora!</a>
+            </div>
+        </div>
+
+        <div id="chuteira" class="product">
+            <img src="https://i.pinimg.com/736x/49/60/cb/4960cbfcbae5d81088f8043e60df2fdc.jpg" alt="Chuteira Neymar Ousadia e Alegria">
+            <div class="product-details">
+                <h2 class="product-title">Chuteira Neymar Ousadia e Alegria</h2>
+                <p class="product-description">A chuteira oficial para quem busca alegria e estilo nos gramados.</p>
+                <p class="product-price">R$ 129,99%</p>
+                <a href="https://wa.me/12935000257?text=Olá%20gostaria%20de%20pedir%20uma%20Chuteira%20Neymar%20Ousadia%20e%20Alegria." target="_blank" class="buy-button">Comprar Agora!</a>
+            </div>
+        </div>
+
+        <div id="calcao" class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSxOmV38JKtDjQ-lo7n-l7WjU5tIeBoatSU6ETWAX9yEgUAsEErEhe16HIrZalSfKnJ0gSsOwNwx9ReTgQuHoSHegBJb3syTjKEWGTudM9u&amp;usqp=CAE" alt="Calção Oficial Corinthians">
+            <div class="product-details">
+                <h2 class="product-title">Calção Oficial Corinthians</h2>
+                <p class="product-description">Calção para jogadores, com tecido leve e respirável.</p>
+                <p class="product-price">R$ 99,99%</p>
+                <a href="https://wa.me/12935000257?text=Olá%20gostaria%20de%20pedir%20um%20Calção%20Oficial%20Corinthians." target="_blank" class="buy-button">Comprar Agora!</a>
+            </div>
+        </div>
+
+        <div id="meiao" class="product">
+            <img src="https://imgnike-a.akamaihd.net/1300x1300/017305IMA5.jpg" alt="Meião Nike Classic Football Dri-FIT - Preto">
+            <div class="product-details">
+                <h2 class="product-title">Meião Nike Academy Unissex</h2>
+                <p class="product-description">Meião Nike para jogadores, com tecido leve.</p>
+                <p class="product-price">R$ 39,99%</p>
+                <a href="https://wa.me/12935000257?text=Olá%20gostaria%20de%20pedir%20um%20Meião%20Nike%20Academy%20Unissex." target="_blank" class="buy-button">Comprar Agora!</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Loja Online. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

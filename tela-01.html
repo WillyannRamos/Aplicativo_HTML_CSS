@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(45deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        div {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        img {
+            max-width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            margin-bottom: 15px;
+            outline: none;
+            box-shadow: 0px 4px 15px rgba(0, 180, 216, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        input:focus {
+            background: linear-gradient(45deg, #0077b6, #00b4d8);
+            box-shadow: 0px 4px 20px rgba(0, 180, 216, 0.8);
+        }
+        .futuristic-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #00b4d8, #0077b6);
+            color: white;
+            padding: 16px 32px;
+            font-size: 18px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        .futuristic-button:hover {
+            background: linear-gradient(45deg, #0077b6, #00b4d8);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 180, 216, 0.7);
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            div {
+                width: 100%;
+                padding: 40px;
+            }
+            input, .futuristic-button {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Link de "Voltar" para a tela de login -->
+        <a href="tela-de-login.html" class="back-link">← Voltar para o login</a>
+        <br><br>
+        <img src="https://img.freepik.com/vetores-premium/design-do-logotipo-wt_731343-28.jpg" 
+             alt="Design do logotipo WT | Vetor Premium">
+        <form action="Loja-Login.html" method="GET">
+            <h1>Cadastro</h1>
+            <input type="text" placeholder="Nome" name="nome" required>
+            <input type="email" placeholder="E-mail" name="email" required>
+            <input type="password" placeholder="Senha" name="senha" required>
+            <input type="password" placeholder="Confirmar Senha" name="confirmar_senha" required>
+            <!-- Botão "Pronto" futurista -->
+            <a href="tela-de-login.html" class="futuristic-button">Pronto</a>
+            <br><br>
+        </form>
+    </div>
+</body>
+</html>

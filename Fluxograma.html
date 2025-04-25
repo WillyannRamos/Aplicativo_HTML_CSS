@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Desconto de Compras Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="number"], input[type="checkbox"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sistema de Desconto de Compras Online</h1>
+        
+        <label for="valor-compra">Valor da Compra (R$):</label>
+        <input type="number" id="valor-compra" placeholder="Digite o valor da compra" required>
+        
+        <label for="cliente-fidelidade">Cliente Fidelidade (Cadastro há mais de 1 ano):</label>
+        <input type="checkbox" id="cliente-fidelidade">
+        
+        <label for="promo-especial">Produtos em Promoção Especial (20% de desconto):</label>
+        <input type="checkbox" id="promo-especial">
+        
+        <button onclick="calcularDesconto()">Calcular Desconto</button>
+        
+        <div class="result" id="resultado">
+            <!-- O resultado será exibido aqui -->
+        </div>
+    </div>
+
+    <script>
+        function calcularDesconto() {
+            // Obter os valores dos inputs
+            let valorCompra = parseFloat(document.getElementById("valor-compra").value);
+            let fidelidade = document.getElementById("cliente-fidelidade").checked;
+            let promoEspecial = document.getElementById("promo-especial").checked;
+            let valorFinal = valorCompra;
+
+            // Verificar se o valor da compra está acima dos limites para descontos
+            if (valorCompra > 500) {
+                valorFinal *= 0.85; // 15% de desconto
+            } else if (valorCompra > 300) {
+                valorFinal *= 0.90; // 10% de desconto
+            } else if (valorCompra > 100) {
+                valorFinal *= 0.95; // 5% de desconto
+            }
+
+            // Verificar se o cliente é fidelidade
+            if (fidelidade) {
+                valorFinal *= 0.98; // 2% de desconto adicional
+            }
+
+            // Verificar se há promoção especial
+            if (promoEspecial) {
+                valorFinal *= 0.80; // 20% de desconto fixo
+            }
+
+            // Exibir o valor final
+            document.getElementById("resultado").innerHTML = "Valor Final: R$ " + valorFinal.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
